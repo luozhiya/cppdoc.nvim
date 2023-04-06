@@ -41,7 +41,7 @@ end
 
 function M.open()
     -- but it works
-    vim.cmd("terminal RESP=$(cat "..M.config.install_dir.."/index.txt | fzf);if [ $? -ne 130 ]; then; xdg-open "..M.config.install_dir.."/reference/en/$RESP.html;fi")
+    vim.cmd("terminal RESP=$(cat "..M.config.install_dir.."/index.txt | fzf);if [ $? -ne 130 ]; then firefox "..M.config.install_dir.."/reference/en/$RESP.html;fi")
     vim.cmd("normal! i")
 end
 
